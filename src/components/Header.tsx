@@ -3,7 +3,7 @@ import { MdLabel } from "react-icons/md";
 
 const Header = () => {
     return (
-        <header className=" border-gray-300 border-b-2 p-4 h-[94px]">
+        <header className=" border-gray-300 border-b-[1.52px] p-4 h-[94px]">
             <nav>
               <ul className='flex gap-6 pl-3'>
                 <li className='flex items-center gap-3 bg-wingman-teal px-3 py-3 rounded-full font-medium text-lg text-wingman-black'><PiChartPieSliceFill />Summary</li>

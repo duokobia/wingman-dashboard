@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         'wingman-blue': '#1DA1F2', 
         'wingman-green': '#115E56',
+        'wingman-iconGreen': '#15B79F',
         'wingman-teal': '#CCFBEF',
         'wingman-turquiose': '#15879F',
         'wingman-red': '#F04438',
