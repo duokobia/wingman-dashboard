@@ -1,11 +1,15 @@
 import React from 'react';
 
 import './App.css';
+// import Header from './components/Header';
+import SideNav from './components/SideNav';
+import MainSection from './components/MainSection';
 
 function App() {
   return (
-    <div className="text-green-400">
-      <h1>Wingman Dashboard</h1>
+    <div className="flex">
+      <SideNav />
+      <MainSection />
     </div>
   );
 }
