@@ -3,9 +3,42 @@ import { PiChatTeardropFill, PiPiggyBankFill, PiDatabaseFill } from "react-icons
 import { FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
 import { MdLabel } from "react-icons/md";
 import { FaCheck } from "react-icons/fa";
+import { BsFillBarChartLineFill } from "react-icons/bs";
+import BarGraph from "./charts/BarGraph";
+
 
 
 const Content = () => {
+  const dataArray1 = [
+    {
+      value: 28,
+      legend: "Mon"
+    },
+    {
+      value: 28,
+      legend: "Tue"
+    },
+    {
+      value: 32,
+      legend: "Wed"
+    },
+    {
+      value: 55,
+      legend: "Thu"
+    },
+    {
+      value: 31,
+      legend: "Fri"
+    },
+    {
+      value: 37,
+      legend: "Sat"
+    },
+    {
+      value: 38,
+      legend: "Sun"
+    },
+  ]
   return (
     <main className=' min-h-screen m-8 border-gray-300 border-[1.3px] rounded-3xl'>
       <section className='atAGlance'>
@@ -50,41 +83,48 @@ const Content = () => {
           </div>
         </div>
       </section>
-      <section className='atAGlance my-12'>
-        <h1>Insights</h1>
-        <div>
-          Charts
+      <section className='insight my-12'>
+      <div className='my-4 mx-6 py-4 flex justify-between'>
+        <h1 className='text-3xl text-wingman-black'>Insights</h1>
         </div>
-        <div className='grid w-full grid-flow-row-dense grid-cols-1 xs:gap-8 lg:mb-0 mt-16 md:mt-8 lg:mt-8 lg:max-w-full lg:grid-cols-5 md:gap-2 lg:gap-6  p-4'>
-        <div className='flex flex-col rounded-2xl border-gray-300 border-2 p-4 gap-2'>
-            <h2 className='title'>Consultations</h2>
-            <h3>24</h3>
-            <span>Barchart</span>
+        <div className="grid grid-cols-3 gap-4 lg:grid-cols-[3fr_1fr_1fr] mx-6 mb-6">
+          <div className="bg-white py-8 rounded-3xl  border-gray-300 border-[0.82px] shadow-md px-6">
+          <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-3'><PiChatTeardropFill />CONSULTATIONS</h2>
+          <BarGraph dataArray={dataArray1} />
           </div>
-        <div className='flex flex-col rounded-2xl border-gray-300 border-2 p-4 gap-2'>
-            <h2 className='title'>vs Past period</h2>
-            <h3>24</h3>
-            <span>Barchart</span>
+          <div className="bg-white p-4 rounded-3xl border-gray-300 border-[0.82px] shadow-md px-6">
+          <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-3'><BsFillBarChartLineFill />VS PAST PERIOD</h2>
           </div>
-        <div className='flex flex-col rounded-2xl bg-green-700 text-white border-gray-300 border-2 p-4 gap-2'>
-            <h2 className='title'>Chart 1</h2>
-            <h3>24</h3>
-            <span>Barchart</span>
-          </div>
-          </div>
-      </section>
-      <section className='atAGlance p-4'>
-        <h1 className='mb-4'>Orders</h1>
-        <div>
-          {/* <Table /> */}
-          <div className='flex flex-col rounded-lg  text-black border-gray-300 border-2 gap-2 p-4'>
-            <h2 className='title'>Table</h2>
-            <h3>24</h3>
-            <span>Barchart</span>
-          </div>
+          <div 
+              className="bg-wingman-iconGreen text-white px-5 py-6 rounded-3xl border-gray-300 border-[0.82px] shadow-md"    
+          >
+            <h2 className='title font-semibold text-sm  flex items-center gap-3 mb-3'>
+                <PiChatTeardropFill />FORECASTS
+            </h2>
+            <span className="flex items-center gap-12 my-6">
+            <h3 className="font-medium text-5xl">+15%</h3> <span className="font-thin text-2xl pb-4"><FaArrowTrendUp /></span></span>
+            <span className="font-extralight">
+                forecasted increase in your sales closed by the end of the current month
+            </span>
+            <span className="flex items-center gap-12 my-6">
+            <h3 className="font-medium text-5xl">+20%</h3> <span className=" font-thin text-2xl pb-4"><FaArrowTrendUp /></span></span>
+            <span className="font-extralight">
+            forecasted increase in consultations by the end of the current month
+            </span>
+        </div>
         </div>
       </section>
-
+    <section className='insight my-12'>
+      <div className='my-4 mx-6 py-4 flex justify-between'>
+        <h1 className='text-3xl text-wingman-black'>Orders</h1>
+        </div>
+        <div className="grid grid-cols-1 gap-4  mx-6 mb-6">
+          <div className="bg-white py-8 rounded-lg  border-gray-300 border-[0.82px] shadow-md px-6">
+          <h2 className='text-2xl text-wingman-lightgray flex items-center gap-3 mb-3'>Table</h2>
+          </div>
+      
+        </div>
+      </section>
     </main>
   )
 }
