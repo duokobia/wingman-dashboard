@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["react", "react-dom"]
+    "types": ["react", "react-dom", "react-paginate"]
   },
-  "include": ["src"]
+  "include": ["src/**/*", "react.d.ts"] 
 }
