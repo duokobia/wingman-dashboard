@@ -92,20 +92,32 @@ const Content = () => {
           </div>
           </div>
           <div 
-              className="bg-wingman-iconGreen text-white px-5 py-6 rounded-3xl border-gray-300 border-[0.82px] shadow-md"    
-          >
-            <h2 className='title font-semibold text-sm  flex items-center gap-3 mb-3'>
+            className="relative px-6 py-8 rounded-3xl border-gray-300 border-[0.82px] shadow-md overflow-hidden"    
+            style={{ 
+              background: `
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 50%),
+                radial-gradient(circle at 80% 80%, rgba(14, 147, 130, 0.8) 0%, rgba(14, 147, 130, 0) 50%),
+                radial-gradient(circle at 50% 50%, rgba(21, 183, 159, 1) 0%, rgba(14, 147, 130, 1) 100%)
+              `,
+              color: 'white'
+            }}
+        >
+            <h2 className='title font-semibold text-sm flex items-center gap-3 mb-3'>
                 <PiChatTeardropFill />FORECASTS
             </h2>
-            <span className="flex items-center gap-12 my-6">
-            <h3 className="font-medium text-5xl">+15%</h3> <span className="font-thin text-2xl pb-4"><FaArrowTrendUp /></span></span>
+            <span className="flex items-center gap-12 mt-10 mb-6">
+                <h3 className="font-medium text-5xl">+15%</h3> 
+                <span className="font-thin text-2xl pb-4"><FaArrowTrendUp /></span>
+            </span>
             <span className="font-extralight">
                 forecasted increase in your sales closed by the end of the current month
             </span>
-            <span className="flex items-center gap-12 my-6">
-            <h3 className="font-medium text-5xl">+20%</h3> <span className=" font-thin text-2xl pb-4"><FaArrowTrendUp /></span></span>
+            <span className="flex items-center gap-12 mt-12 mb-6">
+                <h3 className="font-medium text-5xl">+20%</h3> 
+                <span className="font-thin text-2xl pb-4"><FaArrowTrendUp /></span>
+            </span>
             <span className="font-extralight">
-            forecasted increase in consultations by the end of the current month
+                forecasted increase in consultations by the end of the current month
             </span>
         </div>
         </div>
