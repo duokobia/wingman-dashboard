@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# React TypeScript Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a frontend application built for submission for the Wingman frontend assessment using React and TypeScript. It is designed to showcase my skills in frontend development. The application features an interactive and responsive dashboard that helps users visualize data related to consultations, orders, and sales metrics across different devices.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Dynamic Data Visualization**: Displays various metrics using charts and graphs.
+- **Responsive Design**: Built with Tailwind CSS for a modern and responsive user interface.
+- **Interactive Components**: Includes dropdowns and tables for user interaction.
+- **Forecasting Insights**: Provides insights into sales and consultations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Icons**: For including icons in the UI.
+- **React Chart Libraries**: For rendering charts and graphs.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with this project, follow these steps:
 
-### `npm run build`
+1. Clone the repository:
+  ```
+  git clone https://github.com/duokobia/wingman-dashboard.git
+  cd wingman dashboard
+  ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+ ```
+ npm install
+ ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
+```
+npm start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This React application has been deployed on [Vercel](https://wingman-dashboard-chi.vercel.app/). You can access the live version of the application at:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Live Demo](https://your-deployed-app-url.com)
 
-## Learn More
+### Notes on Deployment
+- Ensure that all environment variables are set correctly in your deployment settings.
+- The build command used during deployment is `npm run build`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Once the application is running, you can interact with the dashboard to view various metrics:
+
+- Use the dropdown to filter data based on different time periods.
+- View detailed insights about consultations and orders.
+- Explore charts that represent sales trends and forecasts.
+
+## Code Structure
+
+The project structure is organized as follows:
+
+
+src/
+├── components/ # Reusable components
+│ ├── Dropdown.tsx # Dropdown component
+│ ├── OrdersTable.tsx # Orders table component
+│ └── ... # Other components
+├── charts/ # Chart components
+│ ├── ConsultationsCharts.tsx # Chart for consultations
+│ └── ... # Other chart components
+├── App.tsx # Main application component
+├── index.tsx # Application entry point
+└── ... # Other files
+
+
+## Acknowledgments
+
+- Thanks to the creators of React, TypeScript, Tailwind CSS, and all other libraries used in this project.
