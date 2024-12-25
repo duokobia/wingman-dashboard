@@ -1,96 +1,56 @@
-// import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
+import { RxCaretDown } from "react-icons/rx";
 
-// interface Option {
-//   value: string;
-//   label: string;
-// }
+const Dropdown: React.FC = () => {
+    const [selectedOption, setSelectedOption] = useState<string>('7 days');
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
-// interface DropdownProps {
-//   options: Option[];
-//   placeholder?: string;
-//   onChange?: (value: string) => void;
-// }
+    const handleChange = (option: string) => {
+        setSelectedOption(option);
+        setIsOpen(false);
+    };
 
-// const Dropdown = ({ options, placeholder = 'Select', onChange }: DropdownProps): JSX.Element => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const [selectedOption, setSelectedOption] = useState(null);
-//   const dropdownRef = useRef(null);
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
 
-//   const handleToggle = (): void => {
-//     setIsOpen(!isOpen);
-//   };
+    const options = ['7 days', '14 days', '21 days', '28 days'];
 
-//   const handleOptionClick = (option: Option): void => {
-//     setSelectedOption(option);
-//     setIsOpen(false);
-//     if (onChange) {
-//       onChange(option.value);
-//     }
-//   };
+    return (
+        <div className="relative inline-block text-left">
+            <div>
+                <button
+                    type="button"
+                    onClick={toggleDropdown}
+                    className="inline-flex justify-center w-full px-4 py-2 text-md font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-wingman-green"
+                >
+                    {selectedOption}
+                    <RxCaretDown className="w-5 h-5 ml-2 -mr-1 text-gray-400" aria-hidden="true" />
+                </button>
+            </div>
 
-//   useEffect(() => {
-//     const handleClickOutside = (event: MouseEvent): void => {
-//       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-//         setIsOpen(false);
-//       }
-//     };
+            {isOpen && (
+                <div className="absolute right-0 w-full mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        {options.map((option) => (
+                            <button
+                                key={option}
+                                onClick={() => handleChange(option)}
+                                className="block w-full px-4 py-2 text-md text-left hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem"
+                                style={{
+                                    backgroundColor: selectedOption === option ? '#115E56' : 'white',
+                                    color: selectedOption === option ? 'white' : 'black',
+                                }}
+                            >
+                                {option}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
 
-//     document.addEventListener('mousedown', handleClickOutside);
-//     return () => {
-//       document.removeEventListener('mousedown', handleClickOutside);
-//     };
-//   }, []);
-
-//   return (
-//     <div className="relative" ref={dropdownRef}>
-//       <button
-//         className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-between"
-//         onClick={handleToggle}
-//         type="button"
-//       >
-//         <span>{selectedOption ? selectedOption.label : placeholder}</span>
-//         <svg
-//           className="w-5 h-5 ml-2"
-//           fill="none"
-//           stroke="currentColor"
-//           viewBox="0 0 24 24"
-//           xmlns="http://www.w3.org/2000/svg"
-//         >
-//           <path
-//             strokeLinecap="round"
-//             strokeLinejoin="round"
-//             strokeWidth={2}
-//             d="M19 9l-7 7-7-7"
-//           />
-//         </svg>
-//       </button>
-//       {isOpen && (
-//         <div className="absolute mt-2 w-full rounded-md shadow-lg bg-white z-10">
-//           <ul className="py-1">
-//             {options.map((option) => (
-//               <li
-//                 key={option.value}
-//                 className="cursor-pointer hover:bg-gray-100 px-4 py-2"
-//                 onClick={() => handleOptionClick(option)}
-//               >
-//                 {option.label}
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Dropdown;
-
-import React from 'react'
-
-const Dropdown = () => {
-  return (
-    <div>Dropdown</div>
-  )
-}
-
-export default Dropdown
+export default Dropdown;
