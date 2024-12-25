@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a frontend application built for submission for the Wingman frontend assessment using React and TypeScript. It is designed to showcase my skills in frontend development. The application features an interactive and responsive dashboard that helps users visualize data related to consultations, orders, and sales metrics across different devices.
+This React TypeScript application, developed for the Wingman frontend assessment, showcases my frontend development skills. It presents a responsive dashboard for visualizing key metrics, including consultations, orders, and sales data, across various devices.
 
 ## Dashboard Snapshot
 
@@ -53,9 +53,7 @@ npm start
 
 ## Deployment
 
-This React application has been deployed on [Vercel](https://wingman-dashboard-chi.vercel.app/). You can access the live version of the application at:
-
-[Live Demo](https://wingman-dashboard-chi.vercel.app/)
+This React application has been deployed on Vercel. Please click this link to assess the live version of the application [Vercel](https://wingman-dashboard-chi.vercel.app/). 
 
 ### Notes on Deployment
 - Ensure that all environment variables are set correctly in your deployment settings.
@@ -99,4 +97,4 @@ wingman-dashboard/
 
 ## Acknowledgments
 
-- Thanks to the wingman team for giving me an opportunity to showcase my frontend development skills as a developer. Also to the creators of React, TypeScript, Tailwind CSS, and all other libraries used in this project, I say thank you.
+- I extend my deepest thanks to the Wingman team for affording me this opportunity to demonstrate my frontend development capabilities. I would also like to acknowledge the creators of React, TypeScript, Tailwind CSS, and the other libraries that were instrumental in the successful completion of this project.
