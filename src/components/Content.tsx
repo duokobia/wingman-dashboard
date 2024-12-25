@@ -1,4 +1,3 @@
-import { RxCaretDown } from "react-icons/rx";
 import { PiChatTeardropFill, PiPiggyBankFill, PiDatabaseFill } from "react-icons/pi";
 import { FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
 import { MdLabel } from "react-icons/md";
@@ -8,6 +7,7 @@ import ConsultationsBarChart from "./charts/ConsultationsCharts";
 import LegendComponent from "./charts/LegendComponent";
 import PastPeriodBarcharts from "./charts/PastPeriodBarcharts";
 import OrdersTable from "./OrdersTable";
+import Dropdown from "./Dropdown";
 
 
 const Content = () => {
@@ -27,7 +27,7 @@ const Content = () => {
       <section className='atAGlance'>
         <div className='my-4 mx-6 py-4 flex justify-between'>
         <h1 className='text-3xl text-wingman-black'>At a glance</h1>
-        <button className="outline outline-gray-300 rounded-lg px-3 text-wingman-black shadow-md"><span className="flex items-center gap-2">7 days <span className="text-2xl"><RxCaretDown /></span></span></button>
+        <Dropdown />
         </div>
         <div className='grid w-full grid-flow-row-dense grid-cols-1 xs:gap-8 lg:mb-0 mt-16 md:mt-8 lg:mt-8 lg:max-w-full lg:grid-cols-3 md:gap-2 lg:gap-8  py-1 px-6'>
 
