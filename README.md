@@ -4,6 +4,13 @@
 
 This project is a frontend application built for submission for the Wingman frontend assessment using React and TypeScript. It is designed to showcase my skills in frontend development. The application features an interactive and responsive dashboard that helps users visualize data related to consultations, orders, and sales metrics across different devices.
 
+## Dashboard Snapshot
+
+Here is a snapshot of the dashboard:
+
+![Dashboard Snapshot](./assets/wingman-dashboard-snapshot.png)  
+
+
 ## Features
 
 - **Dynamic Data Visualization**: Displays various metrics using charts and graphs.
