@@ -14,8 +14,8 @@ const LegendComponent = ({ label, color }: LegendItem) => {
     >
       <span 
         style={{ 
-          width: '25px', 
-          height: '5px', 
+          width: '20px', 
+          height: '4px', 
           borderRadius: '5px', 
           marginRight: '5px', 
           display: 'inline-block', 

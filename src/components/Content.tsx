@@ -6,6 +6,7 @@ import { FaCheck } from "react-icons/fa";
 import { BsFillBarChartLineFill } from "react-icons/bs";
 import ConsultationsBarChart from "./charts/ConsultationsCharts";
 import LegendComponent from "./charts/LegendComponent";
+import PastPeriodBarcharts from "./charts/PastPeriodBarcharts";
 
 
 const Content = () => {
@@ -68,7 +69,7 @@ const Content = () => {
       <div className='my-4 mx-6 py-4 flex justify-between'>
         <h1 className='text-3xl text-wingman-black'>Insights</h1>
         </div>
-        <div className="grid grid-cols-3 gap-4 lg:grid-cols-[3fr_1fr_1fr] mx-6 mb-6">
+        <div className="grid grid-cols-3 gap-4 lg:grid-cols-[5fr_2fr_2fr] mx-6 mb-6">
           <div className="bg-white py-8 rounded-3xl  border-gray-300 border-[0.82px] shadow-md px-6">
           <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-8'><PiChatTeardropFill />CONSULTATIONS</h2>
           <ConsultationsBarChart data={data} height={300} barColor="#fff3c8" />
@@ -79,8 +80,16 @@ const Content = () => {
             <LegendComponent color="#FFF3C6" label="Experts online" />
           </div>
           </div>
-          <div className="bg-white p-4 rounded-3xl border-gray-300 border-[0.82px] shadow-md px-6">
-          <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-3'><BsFillBarChartLineFill />VS PAST PERIOD</h2>
+          <div className="bg-white py-8 rounded-3xl border-gray-300 border-[0.82px] shadow-md px-4">
+          <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-10'><BsFillBarChartLineFill />VS PAST PERIOD</h2>
+          <div style={{ width: '100%', height: '330px' }}>
+          <PastPeriodBarcharts />
+          <div className='border-b-[0.82px] border-b-gray-600 mt-6 mb-5'></div>
+          <div className="flex gap-2 pt-3">
+            <LegendComponent color="#8A94A6" label="Consultations" />
+            <LegendComponent color="#15B79F" label="Orders closed" />
+          </div>
+          </div>
           </div>
           <div 
               className="bg-wingman-iconGreen text-white px-5 py-6 rounded-3xl border-gray-300 border-[0.82px] shadow-md"    
