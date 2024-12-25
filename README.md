@@ -53,7 +53,7 @@ npm start
 
 ## Deployment
 
-This React application has been deployed on Vercel. Please click this link to assess the live version of the application [Vercel](https://wingman-dashboard-chi.vercel.app/). 
+This React application has been deployed on Vercel. Please click this [Vercel](https://wingman-dashboard-chi.vercel.app/) link to assess the live version of the application. 
 
 ### Notes on Deployment
 - Ensure that all environment variables are set correctly in your deployment settings.
