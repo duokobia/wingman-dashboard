@@ -7,6 +7,7 @@ import { BsFillBarChartLineFill } from "react-icons/bs";
 import ConsultationsBarChart from "./charts/ConsultationsCharts";
 import LegendComponent from "./charts/LegendComponent";
 import PastPeriodBarcharts from "./charts/PastPeriodBarcharts";
+import OrdersTable from "./OrdersTable";
 
 
 const Content = () => {
@@ -126,9 +127,9 @@ const Content = () => {
       <div className='my-4 mx-6 py-4 flex justify-between'>
         <h1 className='text-3xl text-wingman-black'>Orders</h1>
         </div>
-        <div className="grid grid-cols-1 gap-4  mx-6 mb-6">
-          <div className="bg-white py-8 rounded-lg  border-gray-300 border-[0.82px] shadow-md px-6">
-          <h2 className='text-2xl text-wingman-lightgray flex items-center gap-3 mb-3'>Table</h2>
+        <div className="grid grid-cols-1 gap-4 mx-6 mb-6">
+          <div className="bg-white rounded-lg border-gray-300 border-[1.5px]">
+            <OrdersTable />
           </div>
       
         </div>
