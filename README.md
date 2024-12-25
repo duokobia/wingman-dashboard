@@ -8,7 +8,7 @@ This project is a frontend application built for submission for the Wingman fron
 
 Here is a snapshot of the dashboard:
 
-![Dashboard Snapshot](./assets/wingman-dashboard-snapshot.png)  
+![Dashboard Snapshot](./src/assets/wingman-dashboard-snapshot.png)  
 
 
 ## Features
