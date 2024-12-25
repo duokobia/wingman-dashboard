@@ -1,46 +1,100 @@
-# Getting Started with Create React App
+# React TypeScript Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This React TypeScript application, developed for the Wingman frontend assessment, showcases my frontend development skills. It presents a responsive dashboard for visualizing key metrics, including consultations, orders, and sales data, across various devices.
 
-In the project directory, you can run:
+## Dashboard Snapshot
 
-### `npm start`
+Here is a snapshot of the dashboard implemented:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Dashboard Snapshot](./src/assets/wingman-dashboard-snapshot.png)  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Dynamic Data Visualization**: Displays various metrics using charts and graphs.
+- **Responsive Design**: Built with Tailwind CSS for a modern and responsive user interface.
+- **Interactive Components**: Includes dropdowns and tables for user interaction.
+- **Forecasting Insights**: Provides insights into sales and consultations.
+- **Fake REST Call**: Fake API call was simulated.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
+- **Tailwind CSS**: TailwindCSS, a utility-first CSS framework was used for styling.
+- **React Icons**: For including icons in the UI.
+- **React Chart Libraries**: Recharts library was used for rendering charts and graphs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get started with this project, follow these steps:
 
-### `npm run eject`
+1. Clone the repository:
+  ```
+  git clone https://github.com/duokobia/wingman-dashboard.git
+  cd wingman-dashboard
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install dependencies:
+ ```
+ npm install
+ ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Start the development server:
+```
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+4. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This React application has been deployed on Vercel. Please click this [Vercel](https://wingman-dashboard-chi.vercel.app/) link to assess the live version of the application. 
+
+### Notes on Deployment
+- Ensure that all environment variables are set correctly in your deployment settings.
+- The build command used during deployment is `npm run build`.
+
+## Usage
+
+Once the application is running, you can interact with the dashboard to view various metrics:
+
+- Use the dropdown to filter data based on different time periods.
+- View detailed insights about consultations and orders.
+- Explore charts that represent sales trends and forecasts.
+
+## Code Structure
+
+The project structure is organized as follows:
+
+
+```
+wingman-dashboard/
+├── src/
+│   ├── @types/
+│   │   └── ...
+│   ├── assets/
+│   │   └── ...
+│   ├── components/
+│   │   └── ...
+│   └── App.tsx
+│   └── index.css
+│   └── index.tsx
+└── gitignore
+└── package-lock.json
+└── package.json
+├── postcss.config.js
+├── react.d.ts
+├── README.md
+├── tailwind.config.js
+└── tsconfig.json
+```
+
+
+## Acknowledgments
+
+- I extend my deepest thanks to the Wingman team for affording me this opportunity to demonstrate my frontend development capabilities. I would also like to acknowledge the creators of React, TypeScript, Tailwind CSS, and the other libraries that were instrumental in the successful completion of this project.
