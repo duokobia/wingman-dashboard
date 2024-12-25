@@ -6,7 +6,7 @@ This project is a frontend application built for submission for the Wingman fron
 
 ## Dashboard Snapshot
 
-Here is a snapshot of the dashboard:
+Here is a snapshot of the dashboard implemented:
 
 ![Dashboard Snapshot](./src/assets/wingman-dashboard-snapshot.png)  
 
@@ -17,14 +17,15 @@ Here is a snapshot of the dashboard:
 - **Responsive Design**: Built with Tailwind CSS for a modern and responsive user interface.
 - **Interactive Components**: Includes dropdowns and tables for user interaction.
 - **Forecasting Insights**: Provides insights into sales and consultations.
+- **Fake REST Call**: Fake API call was simulated.
 
 ## Technologies Used
 
 - **React**: JavaScript library for building user interfaces.
 - **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Tailwind CSS**: TailwindCSS, a utility-first CSS framework was used for styling.
 - **React Icons**: For including icons in the UI.
-- **React Chart Libraries**: For rendering charts and graphs.
+- **React Chart Libraries**: Recharts library was used for rendering charts and graphs.
 
 ## Installation
 
@@ -33,7 +34,7 @@ To get started with this project, follow these steps:
 1. Clone the repository:
   ```
   git clone https://github.com/duokobia/wingman-dashboard.git
-  cd wingman dashboard
+  cd wingman-dashboard
   ```
 
 2. Install dependencies:
@@ -54,7 +55,7 @@ npm start
 
 This React application has been deployed on [Vercel](https://wingman-dashboard-chi.vercel.app/). You can access the live version of the application at:
 
-[Live Demo](https://your-deployed-app-url.com)
+[Live Demo](https://wingman-dashboard-chi.vercel.app/)
 
 ### Notes on Deployment
 - Ensure that all environment variables are set correctly in your deployment settings.
@@ -73,19 +74,29 @@ Once the application is running, you can interact with the dashboard to view var
 The project structure is organized as follows:
 
 
-src/
-├── components/ # Reusable components
-│ ├── Dropdown.tsx # Dropdown component
-│ ├── OrdersTable.tsx # Orders table component
-│ └── ... # Other components
-├── charts/ # Chart components
-│ ├── ConsultationsCharts.tsx # Chart for consultations
-│ └── ... # Other chart components
-├── App.tsx # Main application component
-├── index.tsx # Application entry point
-└── ... # Other files
+```
+wingman-dashboard/
+├── src/
+│   ├── @types/
+│   │   └── ...
+│   ├── assets/
+│   │   └── ...
+│   ├── components/
+│   │   └── ...
+│   └── App.tsx
+│   └── index.css
+│   └── index.tsx
+└── gitignore
+└── package-lock.json
+└── package.json
+├── postcss.config.js
+├── react.d.ts
+├── README.md
+├── tailwind.config.js
+└── tsconfig.json
+```
 
 
 ## Acknowledgments
 
-- Thanks to the creators of React, TypeScript, Tailwind CSS, and all other libraries used in this project.
+- Thanks to the wingman team for giving me an opportunity to showcase my frontend development skills as a developer. Also to the creators of React, TypeScript, Tailwind CSS, and all other libraries used in this project, I say thank you.
