@@ -23,13 +23,13 @@ const Content = () => {
     ];
 
   return (
-    <main className=' min-h-screen m-8 border-gray-300 border-[1.3px] rounded-3xl'>
+    <main className='max-w-full min-h-screen m-4 md:m-8 border-gray-300 border-[1.3px] rounded-3xl'>
       <section className='atAGlance'>
-        <div className='my-4 mx-6 py-4 flex justify-between'>
+        <div className='my-2 md:my-4 mx-3 md:mx-6 py-4 flex justify-between'>
         <h1 className='text-3xl text-wingman-black'>At a glance</h1>
         <Dropdown />
         </div>
-        <div className='grid w-full grid-flow-row-dense grid-cols-1 xs:gap-8 lg:mb-0 mt-16 md:mt-8 lg:mt-8 lg:max-w-full lg:grid-cols-3 md:gap-2 lg:gap-8  py-1 px-6'>
+        <div className='grid w-full grid-flow-row-dense grid-cols-1 gap-6 lg:mb-0 mt-6 md:mt-8 lg:mt-8 lg:max-w-full sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 md:gap-6 lg:gap-8 py-1 px-3 md:px-6'>
 
           <div className='flex flex-col rounded-3xl border-gray-300 border-[0.82px] shadow-md px-6 py-7 gap-2 bg-white'>
             <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-3'><PiChatTeardropFill />CONSULTATIONS</h2>
@@ -70,7 +70,7 @@ const Content = () => {
       <div className='my-4 mx-6 py-4 flex justify-between'>
         <h1 className='text-3xl text-wingman-black'>Insights</h1>
         </div>
-        <div className="grid grid-cols-3 gap-4 lg:grid-cols-[5fr_2fr_2fr] mx-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-4 lg:gap-4 lg:grid-cols-[5fr_2fr_2fr] mx-3 md:mx-6 mb-6">
           <div className="bg-white py-8 rounded-3xl  border-gray-300 border-[0.82px] shadow-md px-6">
           <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-8'><PiChatTeardropFill />CONSULTATIONS</h2>
           <ConsultationsBarChart data={data} height={300} barColor="#fff3c8" />
@@ -85,7 +85,7 @@ const Content = () => {
           <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-10'><BsFillBarChartLineFill />VS PAST PERIOD</h2>
           <div style={{ width: '100%', height: '330px' }}>
           <PastPeriodBarcharts />
-          <div className='border-b-[0.82px] border-b-gray-600 mt-6 mb-5'></div>
+          <div className='border-b-[0.82px] border-b-gray-600 mt-1 md:mt-6 mb-2 md:mb-5'></div>
           <div className="flex gap-2 pt-3">
             <LegendComponent color="#8A94A6" label="Consultations" />
             <LegendComponent color="#15B79F" label="Orders closed" />
