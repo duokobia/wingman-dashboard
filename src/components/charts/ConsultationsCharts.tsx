@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  BarChart,
+  ComposedChart,
   Bar,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -13,6 +14,7 @@ import {
 interface DataPoint {
   name: string;
   value: number;
+  lineValue: number;
 }
 
 interface BarChartProps {
@@ -30,7 +32,7 @@ const ConsultationsCharts: React.FunctionComponent<BarChartProps> = ({
 }) => {
   return (
     <ResponsiveContainer width={width} height={height}>
-      <BarChart
+      <ComposedChart
         data={data}
         margin={{
           top: 15,
@@ -53,6 +55,20 @@ const ConsultationsCharts: React.FunctionComponent<BarChartProps> = ({
             dy: 45 
           }}
           tick={{ fill: '#8A94A6' }}  />
+        <YAxis domain={[10, 60]} 
+         orientation="right"
+          ticks={[10, 20, 30, 40, 50, 60] } stroke="#fffff" label={{ 
+            value: 'EXPERTS ONLINE',
+            fontSize: '11px',
+            fontWeight: '900',
+            fill: '#DEE0E1', 
+            angle: -90, 
+            position: 'insideRight', 
+            dx: 5,
+            dy: 45 
+          }}
+          tick={{ fill: '#8A94A6' }}  />
+
         <Tooltip 
           contentStyle={{ 
             backgroundColor: '#fff', 
@@ -76,7 +92,9 @@ const ConsultationsCharts: React.FunctionComponent<BarChartProps> = ({
           )} 
         /> 
         <Bar dataKey="value" fill={barColor} barSize={40} radius={[5, 5, 0, 0]} />
-      </BarChart>
+        <Line type="monotone" dataKey="lineValue" stroke="#15B79F" strokeWidth={2} />
+        <Line type="monotone" dataKey="dashedLineValue" stroke="#8a94a6" strokeWidth={2} strokeDasharray="5 5" />
+      </ComposedChart>
     </ResponsiveContainer>
   );
 };

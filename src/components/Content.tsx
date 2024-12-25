@@ -12,13 +12,13 @@ import PastPeriodBarcharts from "./charts/PastPeriodBarcharts";
 const Content = () => {
 
   const data = [
-      { name: 'Mon', value: 28 },
-      { name: 'Tue', value: 28 },
-      { name: 'Wed', value: 32 },
-      { name: 'Thu', value: 54 },
-      { name: 'Fri', value: 32 },
-      { name: 'Sat', value: 37 },
-      { name: 'Sun', value: 37 },
+      { name: 'Mon', value: 28, lineValue: 24, dashedLineValue: 41 },
+      { name: 'Tue', value: 28, lineValue: 34, dashedLineValue: 14 },
+      { name: 'Wed', value: 32, lineValue: 14, dashedLineValue: 34 },
+      { name: 'Thu', value: 54, lineValue: 54, dashedLineValue: 28 },
+      { name: 'Fri', value: 32, lineValue: 21, dashedLineValue: 20 },
+      { name: 'Sat', value: 37, lineValue: 48, dashedLineValue: 19 },
+      { name: 'Sun', value: 37, lineValue: 24, dashedLineValue: 27 },
     ];
 
   return (
