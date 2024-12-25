@@ -1,7 +1,4 @@
-import React from 'react';
-
 import './App.css';
-// import Header from './components/Header';
 import SideNav from './components/SideNav';
 import MainSection from './components/MainSection';
 

@@ -4,41 +4,22 @@ import { FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
 import { MdLabel } from "react-icons/md";
 import { FaCheck } from "react-icons/fa";
 import { BsFillBarChartLineFill } from "react-icons/bs";
-import BarGraph from "./charts/BarGraph";
-
+import ConsultationsBarChart from "./charts/ConsultationsCharts";
+import LegendComponent from "./charts/LegendComponent";
 
 
 const Content = () => {
-  const dataArray1 = [
-    {
-      value: 28,
-      legend: "Mon"
-    },
-    {
-      value: 28,
-      legend: "Tue"
-    },
-    {
-      value: 32,
-      legend: "Wed"
-    },
-    {
-      value: 55,
-      legend: "Thu"
-    },
-    {
-      value: 31,
-      legend: "Fri"
-    },
-    {
-      value: 37,
-      legend: "Sat"
-    },
-    {
-      value: 38,
-      legend: "Sun"
-    },
-  ]
+
+  const data = [
+      { name: 'Mon', value: 28 },
+      { name: 'Tue', value: 28 },
+      { name: 'Wed', value: 32 },
+      { name: 'Thu', value: 54 },
+      { name: 'Fri', value: 32 },
+      { name: 'Sat', value: 37 },
+      { name: 'Sun', value: 37 },
+    ];
+
   return (
     <main className=' min-h-screen m-8 border-gray-300 border-[1.3px] rounded-3xl'>
       <section className='atAGlance'>
@@ -89,8 +70,14 @@ const Content = () => {
         </div>
         <div className="grid grid-cols-3 gap-4 lg:grid-cols-[3fr_1fr_1fr] mx-6 mb-6">
           <div className="bg-white py-8 rounded-3xl  border-gray-300 border-[0.82px] shadow-md px-6">
-          <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-3'><PiChatTeardropFill />CONSULTATIONS</h2>
-          <BarGraph dataArray={dataArray1} />
+          <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-8'><PiChatTeardropFill />CONSULTATIONS</h2>
+          <ConsultationsBarChart data={data} height={300} barColor="#fff3c8" />
+          <div className='mt-6 border-b-[0.82px] border-b-gray-600'></div>
+          <div className="flex gap-16 pt-8">
+            <LegendComponent color="#8A94A6" label="Incoming" />
+            <LegendComponent color="#15B79F" label="Answered" />
+            <LegendComponent color="#FFF3C6" label="Experts online" />
+          </div>
           </div>
           <div className="bg-white p-4 rounded-3xl border-gray-300 border-[0.82px] shadow-md px-6">
           <h2 className='title font-semibold text-sm text-wingman-lightgray flex items-center gap-3 mb-3'><BsFillBarChartLineFill />VS PAST PERIOD</h2>
